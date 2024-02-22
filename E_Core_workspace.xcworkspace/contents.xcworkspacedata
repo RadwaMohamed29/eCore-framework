@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:E_Core Framework/E_Core Framework.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:E_iPhone/E_iPhone.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:E_iPad/E_iPad.xcodeproj">
+   </FileRef>
+</Workspace>
