@@ -6,8 +6,6 @@
 //
 
 import UIKit
-
-import UIKit
 import E_Core_Framework
 class ViewController: UIViewController {
     override func viewDidLoad() {

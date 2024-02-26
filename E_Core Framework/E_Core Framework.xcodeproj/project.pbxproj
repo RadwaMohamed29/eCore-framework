@@ -14,6 +14,8 @@
 		3E7C4FE42B73D992007C78D3 /* E_Core_sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7C4FE32B73D992007C78D3 /* E_Core_sum.swift */; };
 		3E7C4FE72B73D9B1007C78D3 /* E_Core_UI_ComponentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7C4FE52B73D9B1007C78D3 /* E_Core_UI_ComponentVC.swift */; };
 		3E7C4FE82B73D9B1007C78D3 /* E_Core_UI_ComponentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E7C4FE62B73D9B1007C78D3 /* E_Core_UI_ComponentVC.xib */; };
+		3E909B132B8B56D90079B77A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E909B112B8B56D90079B77A /* LoginViewController.swift */; };
+		3E909B142B8B56D90079B77A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E909B122B8B56D90079B77A /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		3E7C4FE32B73D992007C78D3 /* E_Core_sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_Core_sum.swift; sourceTree = "<group>"; };
 		3E7C4FE52B73D9B1007C78D3 /* E_Core_UI_ComponentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_Core_UI_ComponentVC.swift; sourceTree = "<group>"; };
 		3E7C4FE62B73D9B1007C78D3 /* E_Core_UI_ComponentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = E_Core_UI_ComponentVC.xib; sourceTree = "<group>"; };
+		3E909B112B8B56D90079B77A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3E909B122B8B56D90079B77A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		3E7C4FCB2B73D955007C78D3 /* E_Core Framework */ = {
 			isa = PBXGroup;
 			children = (
+				3E909B0A2B8B56410079B77A /* Login */,
 				3E7C4FCC2B73D955007C78D3 /* E_Core_Framework.h */,
 				3E7C4FCD2B73D955007C78D3 /* E_Core_Framework.docc */,
 				3E7C4FE32B73D992007C78D3 /* E_Core_sum.swift */,
@@ -92,6 +97,15 @@
 				3E7C4FD82B73D955007C78D3 /* E_Core_FrameworkTests.swift */,
 			);
 			path = "E_Core FrameworkTests";
+			sourceTree = "<group>";
+		};
+		3E909B0A2B8B56410079B77A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3E909B112B8B56D90079B77A /* LoginViewController.swift */,
+				3E909B122B8B56D90079B77A /* LoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +170,7 @@
 				TargetAttributes = {
 					3E7C4FC82B73D955007C78D3 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 					3E7C4FD22B73D955007C78D3 = {
 						CreatedOnToolsVersion = 15.2;
@@ -186,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E909B142B8B56D90079B77A /* LoginViewController.xib in Resources */,
 				3E7C4FE82B73D9B1007C78D3 /* E_Core_UI_ComponentVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E909B132B8B56D90079B77A /* LoginViewController.swift in Sources */,
 				3E7C4FE42B73D992007C78D3 /* E_Core_sum.swift in Sources */,
 				3E7C4FCE2B73D955007C78D3 /* E_Core_Framework.docc in Sources */,
 				3E7C4FE72B73D9B1007C78D3 /* E_Core_UI_ComponentVC.swift in Sources */,
@@ -357,6 +374,7 @@
 		3E7C4FDE2B73D955007C78D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -379,6 +397,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -387,6 +406,7 @@
 		3E7C4FDF2B73D955007C78D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
