@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D7DC6F52B8C95A700AD8568 /* TreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7DC6F32B8C95A700AD8568 /* TreeVC.swift */; };
-		2D7DC6F62B8C95A700AD8568 /* TreeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7DC6F42B8C95A700AD8568 /* TreeVC.xib */; };
-		2D7DC6FA2B8C95B400AD8568 /* StructCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7DC6F82B8C95B400AD8568 /* StructCell.swift */; };
-		2D7DC6FB2B8C95B400AD8568 /* StructCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7DC6F92B8C95B400AD8568 /* StructCell.xib */; };
-		2D7DC6FE2B8C965F00AD8568 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7DC6FD2B8C965F00AD8568 /* Tree.swift */; };
-		2D7DC7012B8C96D600AD8568 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7DC7002B8C96D600AD8568 /* UIView+Constraint.swift */; };
 		3E6191362B73E03200C5B872 /* E_Core_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6191352B73E03200C5B872 /* E_Core_Framework.framework */; };
 		3E6191372B73E03200C5B872 /* E_Core_Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6191352B73E03200C5B872 /* E_Core_Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E7C4FF62B73DB2F007C78D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7C4FF52B73DB2F007C78D3 /* AppDelegate.swift */; };
@@ -58,12 +52,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2D7DC6F32B8C95A700AD8568 /* TreeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeVC.swift; sourceTree = "<group>"; };
-		2D7DC6F42B8C95A700AD8568 /* TreeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TreeVC.xib; sourceTree = "<group>"; };
-		2D7DC6F82B8C95B400AD8568 /* StructCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructCell.swift; sourceTree = "<group>"; };
-		2D7DC6F92B8C95B400AD8568 /* StructCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StructCell.xib; sourceTree = "<group>"; };
-		2D7DC6FD2B8C965F00AD8568 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
-		2D7DC7002B8C96D600AD8568 /* UIView+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
 		3E6191352B73E03200C5B872 /* E_Core_Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = E_Core_Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7C4FF22B73DB2F007C78D3 /* E_iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = E_iPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7C4FF52B73DB2F007C78D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,35 +94,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2D7DC6F72B8C95B400AD8568 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				2D7DC6F82B8C95B400AD8568 /* StructCell.swift */,
-				2D7DC6F92B8C95B400AD8568 /* StructCell.xib */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		2D7DC6FC2B8C95F700AD8568 /* TreeComponent */ = {
-			isa = PBXGroup;
-			children = (
-				2D7DC6FF2B8C96C700AD8568 /* Extension */,
-				2D7DC6F32B8C95A700AD8568 /* TreeVC.swift */,
-				2D7DC6F42B8C95A700AD8568 /* TreeVC.xib */,
-				2D7DC6F72B8C95B400AD8568 /* Cell */,
-				2D7DC6FD2B8C965F00AD8568 /* Tree.swift */,
-			);
-			path = TreeComponent;
-			sourceTree = "<group>";
-		};
-		2D7DC6FF2B8C96C700AD8568 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				2D7DC7002B8C96D600AD8568 /* UIView+Constraint.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		3E6191342B73E03200C5B872 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +130,6 @@
 				3E7C4FF72B73DB2F007C78D3 /* SceneDelegate.swift */,
 				3E7C4FF92B73DB2F007C78D3 /* ViewController.swift */,
 				3E7C4FFB2B73DB2F007C78D3 /* Main.storyboard */,
-				2D7DC6FC2B8C95F700AD8568 /* TreeComponent */,
 				3E7C4FFE2B73DB30007C78D3 /* Assets.xcassets */,
 				3E7C50002B73DB30007C78D3 /* LaunchScreen.storyboard */,
 				3E7C50032B73DB30007C78D3 /* Info.plist */,
@@ -301,10 +259,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7DC6F62B8C95A700AD8568 /* TreeVC.xib in Resources */,
 				3E7C50022B73DB30007C78D3 /* LaunchScreen.storyboard in Resources */,
 				3E7C4FFF2B73DB30007C78D3 /* Assets.xcassets in Resources */,
-				2D7DC6FB2B8C95B400AD8568 /* StructCell.xib in Resources */,
 				3E7C4FFD2B73DB2F007C78D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,12 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7DC6F52B8C95A700AD8568 /* TreeVC.swift in Sources */,
-				2D7DC7012B8C96D600AD8568 /* UIView+Constraint.swift in Sources */,
 				3E7C4FFA2B73DB2F007C78D3 /* ViewController.swift in Sources */,
 				3E7C4FF62B73DB2F007C78D3 /* AppDelegate.swift in Sources */,
-				2D7DC6FE2B8C965F00AD8568 /* Tree.swift in Sources */,
-				2D7DC6FA2B8C95B400AD8568 /* StructCell.swift in Sources */,
 				3E7C4FF82B73DB2F007C78D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
