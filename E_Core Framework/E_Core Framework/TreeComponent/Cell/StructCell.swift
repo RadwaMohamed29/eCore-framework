@@ -7,11 +7,11 @@
 
 import UIKit
 
-class StructCell: UICollectionViewCell {
+public class StructCell: UICollectionViewCell {
 
     @IBOutlet weak var structNameLabel: UILabel!
     @IBOutlet weak var expandImageView: UIImageView!
-//    var indentationConstraint: CGFloat = 0
+
     let nameLabel: UILabel = {
         var label = UILabel()
         label.backgroundColor = .white
@@ -43,12 +43,12 @@ class StructCell: UICollectionViewCell {
     let chevronDown = UIImage(systemName: "chevron.down",
                               withConfiguration: UIImage.SymbolConfiguration(weight: .regular))
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
     }

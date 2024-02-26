@@ -76,7 +76,7 @@ extension Tree {
         } else if structID == "UE6Dji5SIPE%3d27" {
             return [
                 
-                Tree(structDesc: "child1", childnodecount: 5, structID: "UE6Dji5SIPE%3d29")
+                Tree(structDesc: "child1", childnodecount: 0, structID: "UE6Dji5SIPE%3d29")
                 ,
                 Tree(structDesc: "child2", childnodecount: 0, structID: "UE6Dji5SIPE%3d30")
             ]

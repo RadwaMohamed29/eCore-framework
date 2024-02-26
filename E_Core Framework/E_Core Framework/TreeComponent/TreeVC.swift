@@ -13,12 +13,18 @@ enum Section {
   case main
 }
 
-class TreeVC: UIViewController {
+public class TreeVC: UIViewController {
 
+    public  init() {
+        super.init(nibName: "TreeVC", bundle: Bundle(for: TreeVC.self))
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: -
     @IBOutlet weak var treeCollectionView: UICollectionView!
-    
     
     
     private typealias DataSource = UICollectionViewDiffableDataSource<Section, Tree>
@@ -37,13 +43,15 @@ class TreeVC: UIViewController {
 
     //MARK: - lifeCycle
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         setupCollectionView()
         
-        applyRootSnapshot(with: tree)
-        
+        DispatchQueue.main.async {
+            self.applyRootSnapshot(with: self.tree)
+            
+        }
          cellreg = UICollectionView.CellRegistration<StructCell, Tree>() { cell, indexPath, item in
 
              let isExpanded =  self.expandedSections.contains(item)
@@ -52,7 +60,7 @@ class TreeVC: UIViewController {
            
              let hasChilds = (item.childnodecount != 0)
              cell.configureRoot(hasChilds: hasChilds, isExpanded: isExpanded)
-             
+            
              let childLevel = self.snapshot.level(of: item)
              cell.set(indentationConstraint: CGFloat(20 * childLevel))
 
@@ -69,7 +77,7 @@ class TreeVC: UIViewController {
 //MARK: - UICollectionViewDelegate
 extension TreeVC: UICollectionViewDelegate {
  
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         guard let snapOFIndex = dataSource.itemIdentifier(for: indexPath) else {return}
 
