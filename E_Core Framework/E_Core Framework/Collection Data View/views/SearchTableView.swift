@@ -10,7 +10,6 @@ import UIKit
 public class SearchTableView: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var dataTableView: UITableView!
-    
     public var numberOfRows: Int = 1
     public var subject: [String] = []
     public var attachment: [String] = []
@@ -28,19 +27,25 @@ public class SearchTableView: UIViewController,UITableViewDelegate,UITableViewDa
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: SearchDataCell.identifier, bundle: nil)
-        dataTableView.register(nib, forCellReuseIdentifier: SearchDataCell.identifier)
+        let nib = UINib(nibName: "SearchDataCell", bundle: Bundle(for: SearchDataCell.self))
+        dataTableView.register(nib, forCellReuseIdentifier: "SearchDataCell")
+       
+        let headerNib = UINib(nibName: "CustomHeaderView", bundle: Bundle(for: CustomHeaderView.self))
+        dataTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
         dataTableView.dataSource = self
         dataTableView.delegate = self
+      
     }
 
-
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numberOfRows
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SearchDataCell.identifier, for: indexPath) as! SearchDataCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchDataCell", for: indexPath) as! SearchDataCell
         
         cell.attachmentLabel.text = attachment[indexPath.row]
         cell.subjectLabel.text = subject[indexPath.row]
@@ -49,5 +54,16 @@ public class SearchTableView: UIViewController,UITableViewDelegate,UITableViewDa
 
     }
     
-
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as! CustomHeaderView
+    return headerView
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return 60
+    }
 }

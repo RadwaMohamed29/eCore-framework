@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16759B8D2B8C798C00FD13E1 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16759B8C2B8C798C00FD13E1 /* CustomHeaderView.swift */; };
+		16759B8F2B8C79B500FD13E1 /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16759B8E2B8C79B500FD13E1 /* CustomHeaderView.xib */; };
 		16E336752B8B658200419275 /* SearchTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E336732B8B658200419275 /* SearchTableView.swift */; };
 		16E336762B8B658200419275 /* SearchTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16E336742B8B658200419275 /* SearchTableView.xib */; };
 		16E336792B8B65A100419275 /* SearchDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E336772B8B65A100419275 /* SearchDataCell.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16759B8C2B8C798C00FD13E1 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
+		16759B8E2B8C79B500FD13E1 /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
 		16E336732B8B658200419275 /* SearchTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableView.swift; sourceTree = "<group>"; };
 		16E336742B8B658200419275 /* SearchTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableView.xib; sourceTree = "<group>"; };
 		16E336772B8B65A100419275 /* SearchDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataCell.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 			children = (
 				16E336732B8B658200419275 /* SearchTableView.swift */,
 				16E336742B8B658200419275 /* SearchTableView.xib */,
+				16759B8C2B8C798C00FD13E1 /* CustomHeaderView.swift */,
+				16759B8E2B8C79B500FD13E1 /* CustomHeaderView.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 				3E7C4FE82B73D9B1007C78D3 /* E_Core_UI_ComponentVC.xib in Resources */,
 				16E336762B8B658200419275 /* SearchTableView.xib in Resources */,
 				16E3367A2B8B65A100419275 /* SearchDataCell.xib in Resources */,
+				16759B8F2B8C79B500FD13E1 /* CustomHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16759B8D2B8C798C00FD13E1 /* CustomHeaderView.swift in Sources */,
 				3E7C4FE42B73D992007C78D3 /* E_Core_sum.swift in Sources */,
 				16E336752B8B658200419275 /* SearchTableView.swift in Sources */,
 				3E7C4FCE2B73D955007C78D3 /* E_Core_Framework.docc in Sources */,
