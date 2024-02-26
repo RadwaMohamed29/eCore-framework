@@ -102,7 +102,7 @@ extension TreeVC {
     
     private func setupCollectionView()  {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: view.bounds.width, height: 50)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.size.width, height: 50)
         treeCollectionView.collectionViewLayout = layout
 
         treeCollectionView.delegate = self
