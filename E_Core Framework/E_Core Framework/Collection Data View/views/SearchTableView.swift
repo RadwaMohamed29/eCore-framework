@@ -8,7 +8,7 @@
 import UIKit
 
 public class SearchTableView: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
+    
     @IBOutlet weak var dataTableView: UITableView!
     public var numberOfRows: Int = 1
     public var subject: [String] = []
@@ -26,17 +26,18 @@ public class SearchTableView: UIViewController,UITableViewDelegate,UITableViewDa
     }
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let nib = UINib(nibName: "SearchDataCell", bundle: Bundle(for: SearchDataCell.self))
-        dataTableView.register(nib, forCellReuseIdentifier: "SearchDataCell")
-       
-        let headerNib = UINib(nibName: "CustomHeaderView", bundle: Bundle(for: CustomHeaderView.self))
-        dataTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
         dataTableView.dataSource = self
         dataTableView.delegate = self
-      
-    }
 
+        let nib = UINib(nibName: "SearchDataCell", bundle: Bundle(for: SearchDataCell.self))
+        dataTableView.register(nib, forCellReuseIdentifier: "SearchDataCell")
+        
+        let headerNib = UINib(nibName: "CustomHeaderView", bundle: Bundle(for: CustomHeaderView.self))
+        dataTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
+        
+        
+    }
+    
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -51,7 +52,7 @@ public class SearchTableView: UIViewController,UITableViewDelegate,UITableViewDa
         cell.subjectLabel.text = subject[indexPath.row]
         
         return cell
-
+        
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -59,11 +60,13 @@ public class SearchTableView: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as! CustomHeaderView
-    return headerView
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as! CustomHeaderView
+        return headerView
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 60
+        return 50
+        
     }
+    
 }
