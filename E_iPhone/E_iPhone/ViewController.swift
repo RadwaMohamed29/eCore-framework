@@ -10,21 +10,30 @@ import E_Core_Framework
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let search = SearchTableView(numberOfRows: 3, subject: ["موضوع بحث","موضوع هام","موضوع للعلم"], attachment: ["1","2","3"])
-       // let search = SearchDataTableView()
+        if let infoPlistPath = Bundle.main.path(forResource: "Info", ofType: "plist") {
+            if let infoDict = NSDictionary(contentsOfFile: infoPlistPath) {
+                if let bundleID = infoDict["CFBundleIdentifier"] as? String {
+                    if bundleID == "Exas.E-iPhone-Radwa"{
+                        let search = SearchTableView(numberOfRows: 3, subject: ["موضوع بحث","موضوع هام","موضوع للعلم"], attachment: ["1","2","3"])
+                        addChild(search)
+                        view.addSubview(search.view)
+                        search.didMove(toParent: self)
+                    }else if bundleID == "Exas.E-iPhone"{
+                        let vc = TreeVC()
+                        addChild(vc)
+                        view.addSubview(vc.view)
+                        vc.didMove(toParent: self)
+                    }
+                }
+            } else {
+                print("Unable to read Info.plist")
+            }
+        } else {
+            print("Info.plist not found")
+        }
+ 
+     
         
-        
-//        let eCoreUIComponent = E_Core_UI_ComponentVC(
-//            message: "Sum of 1+2+3 = \(E_Core_sum.sum(numbers: [1,2,3])) calculated using E_Core_sum..sum function",
-//            btnTitle: "good",
-//            btnColor: .red
-//        )
-//        eCoreUIComponent.btnHandler = {
-//            self.showAlert()
-//        }
-        addChild(search)
-        view.addSubview(search.view)
-        search.didMove(toParent: self)
     }
     
     func showAlert()  {

@@ -14,6 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if let infoDict = Bundle.main.infoDictionary {
+            if let propertyValue = infoDict["APP_DISPLAY_NAME"] as? String {
+                // Use the property value here
+                print("Property Value: \(propertyValue)")
+            } else {
+                // Property not found or type mismatch
+                print("Property not found or type mismatch")
+            }
+        } else {
+            // Info.plist not found
+            print("Info.plist not found")
+        }
         return true
     }
 
