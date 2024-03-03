@@ -14,16 +14,17 @@ class ViewController: UIViewController {
         setupECore()
     }
     func setupECore(){
-        let eCoreUIComponent = E_Core_UI_ComponentVC(
-            message: "Sum of 1+1 = \(E_Core_sum.sum(numbers: [1,1])) calculated using E_Core_sum..sum function",
-            btnTitle: "V.good",
-            btnColor: .green
-        )
-        eCoreUIComponent.btnHandler={
-            let splitVC = SplitViewController()
-            splitVC.modalPresentationStyle = .fullScreen
-            self.present(splitVC, animated: true, completion: nil)
-        }
+        let eCoreUIComponent = TreeVC()
+//        E_Core_UI_ComponentVC(
+//            message: "Sum of 1+1 = \(E_Core_sum.sum(numbers: [1,1])) calculated using E_Core_sum..sum function",
+//            btnTitle: "V.good",
+//            btnColor: .green
+//        )
+//        eCoreUIComponent.btnHandler={
+//            let splitVC = SplitViewController()
+//            splitVC.modalPresentationStyle = .fullScreen
+//            self.present(splitVC, animated: true, completion: nil)
+//        }
         addChild(eCoreUIComponent)
         view.addSubview(eCoreUIComponent.view)
         eCoreUIComponent.didMove(toParent: self)
