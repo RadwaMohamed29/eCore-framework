@@ -8,10 +8,33 @@
 import UIKit
 import E_Core_Framework
 
-enum CoreName: String {
-    case release = "Ecore_Release"
-    case debug = "Ecore_Debug"
-    case component = "Ecore_Component"
+enum CoreName: CaseIterable {
+    case Alaa
+    case Menna
+    case Radwa
+    
+    
+    var name: String {
+        switch self {
+        case .Alaa:
+            return "Core_Alaa"
+        case .Menna:
+            return "Core_Menna"
+        case .Radwa:
+            return "Core_Radwa"
+        }
+    }
+    
+    var icon: String {
+        switch self {
+        case .Alaa:
+            return "AppIcon"
+        case .Menna:
+            return "AppIcon.Debug"
+        case .Radwa:
+            return "AppIcon.Component"
+        }
+    }
 }
 class ViewController: UIViewController {
     override func viewDidLoad() {
@@ -21,20 +44,21 @@ class ViewController: UIViewController {
             // Accessing values from Info.plist
             if let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String {
                 print("App Name: \(appName)")
-                if appName == CoreName.release.rawValue {
+                if appName == CoreName.Radwa.name {
                     let search = SearchTableView(numberOfRows: 3, subject: ["موضوع بحث","موضوع هام","موضوع للعلم"], attachment: ["1","2","3"])
                     addChild(search)
                     view.addSubview(search.view)
                     search.didMove(toParent: self)
-                } else if appName == CoreName.debug.rawValue {
-                    
-                    let coreUI = SearchTableView(numberOfRows: 3, subject: ["موضوع بحث","موضوع هام","موضوع للعلم"], attachment: ["1","2","3"])
+                } else if appName == CoreName.Menna.name {
+                    let coreUI = LoginViewController(splashImage: UIImage(named: "splash"),
+                                                     logoImage: UIImage(named: "logo"))
                     addChild(coreUI)
                     view.addSubview(coreUI.view)
                     coreUI.didMove(toParent: self)
                     
                 } else {
-                    let coreUI = SearchTableView(numberOfRows: 3, subject: ["موضوع بحث","موضوع هام","موضوع للعلم"], attachment: ["1","2","3"])
+            
+                    let coreUI = TreeVC()
                     addChild(coreUI)
                     view.addSubview(coreUI.view)
                     coreUI.didMove(toParent: self)
