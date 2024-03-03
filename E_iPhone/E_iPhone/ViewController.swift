@@ -6,8 +6,6 @@
 //
 
 import UIKit
-
-import UIKit
 import E_Core_Framework
 
 
@@ -43,8 +41,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-
             // Accessing values from Info.plist
             if let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String {
                 print("App Name: \(appName)")
@@ -71,7 +67,6 @@ class ViewController: UIViewController {
 
                 
         
-     
 
     }
     
